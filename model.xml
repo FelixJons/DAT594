@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendposition" value="1531,17"/>
+		<graphics key="legendautolayout" value="false"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Robot">
+			<graphics key="collapsed" value="false"/>
+			<and abstract="true" name="Targeting">
+				<graphics key="collapsed" value="false"/>
+				<feature name="Head-On"/>
+				<feature name="Linear"/>
+				<feature name="Circular"/>
+				<feature name="Pattern_Matching"/>
+				<and name="GuessFactor">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Dynamic_Clustering"/>
+				</and>
+			</and>
+			<and abstract="true" name="Movement">
+				<graphics key="collapsed" value="false"/>
+				<and name="Wave_Surfing">
+					<graphics key="collapsed" value="false"/>
+					<feature name="GoTo"/>
+					<feature name="True"/>
+					<feature name="Melee_Surfing"/>
+				</and>
+				<and abstract="true" name="Random">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Orbital"/>
+					<feature name="Perpendicular"/>
+					<feature name="EscapeArea"/>
+				</and>
+				<and abstract="true" name="Wall_Avoidance">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Reverse"/>
+					<feature name="Wall_Smoothing"/>
+				</and>
+				<and abstract="true" name="Distancing">
+					<feature name="Shield_Smooting"/>
+				</and>
+				<feature name="Anti-Gravity"/>
+			</and>
+			<and abstract="true" name="Radar">
+				<and name="Spinning_Radar">
+					<feature name="Corner_Arc"/>
+				</and>
+				<feature name="Infinitity_Lock"/>
+				<feature name="Turn_Multiplier_Lock"/>
+				<feature name="Width_Lock"/>
+				<feature name="Oldest_Scanned"/>
+				<feature name="Gun_Heat_Lock"/>
+				<feature name="Small_Melee_Sweep"/>
+			</and>
+		</and>
+	</struct>
+</featureModel>
